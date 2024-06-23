@@ -1,0 +1,93 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body{
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+}
+
+.container-title {
+  width: 100%;
+  height: 20%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.container-title h1 {
+  text-align: center;
+  font-size: 24px;
+}
+
+.container-title p {
+  display: block;
+  text-align: center;
+  font-size: 16;
+  width: 70%;
+}
+
+.container-exercise {
+  position: relative;
+  width: 100%;
+  height: 80%;
+}
+
+.container, .admin {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  flex-direction: column;
+  row-gap: 20px;
+}
+
+.container-exercise #login-form, #register-form, .admin {
+  width: 430px;
+  height: auto;
+  border: 1px solid grey;
+  padding: 10px;
+  border-radius: 5px;
+  box-shadow: inset 0 0 4px gray;
+  background-color: #f1f1f1;
+}
+
+
+.container h2 {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.container label {
+  display: block;
+}
+
+.container .input-container{
+  display: flex;
+  align-items: center;
+  column-gap: 10px;
+}
+
+.container .input-container span{
+  font-size: 14px;
+  color: red;
+}
+
+.container input {
+  margin-bottom: 5px;
+}
+
+.container-exercise button {
+  width: 100%;
+  padding: 4px 0;
+  cursor: pointer;
+  border: none;
+  background-color: green;
+  color: #f1f1f1;
+  border-radius: 5px
+}

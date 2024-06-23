@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Authentification</title>
+  <link rel="stylesheet" href="/styles/main.css">
+</head>
+<body>
+    <div class="container-title">
+      <h1>Training Authentification</h1>
+      <p>This exercise allows for secure connection to our account using a hashed password and an access token stored in a cookie, in order to protect the user as much as possible from a potential attack</p>
+    </div>
+    <div class="container-exercise">
+      <% if (typeof username !== 'undefined') { %>
+        <div class="admin">
+          <h2>Hi <%= username %>!</h2>
+          <p>You are in the administration panel</p>
+          <button id="close-session">Close session</button>
+        </div>
+      <% } %>
+
+      <% if (typeof username === 'undefined') { %>
+        <div class="container">
+            <form id="login-form">
+              <h2>Please enter your username and password to Sign In</h2>
+              <label for="login-username">Username :</label>
+              <div class="input-container">
+                <input type="text" id="login-username" name="username" required>
+                <span class="validation-login-username">&nbsp;</span>
+              </div>
+              <label for="login-password">Password :</label>
+              <div class="input-container">
+                <input type="password" id="login-password" name="password" required>
+                <span class="validation-login-password">&nbsp;</span>
+              </div>
+              <button type="submit">Sign In</button>
+              <span class="validation-form">&nbsp;</span>
+            </form>
+            <form id="register-form">
+              <h2>Please Sign Up if you never created a count</h2>
+              <label for="register-username">Username :</label>
+              <div class="input-container">
+                <input type="text" id="register-username" name="username" required>
+                <span class="validation-register-username">&nbsp;</span>
+              </div>
+              <label for="register-password">Password :</label>
+              <div class="input-container">
+                <input type="password" id="register-password" name="password" required>
+                <span class="validation-register-password">&nbsp;</span>
+              </div>
+              <label for="register-confirm-password">Confirm Password :</label>
+              <div class="input-container">
+                <input type="password" id="register-confirm-password" name="password" required>
+                <span class="validation-register-confirm-password">&nbsp;</span>
+              </div>
+              <button type="submit">Sign Up</button>
+              <span class="validation-form">&nbsp;</span>
+            </form>
+        </div>
+      <% } %>
+    </div>
+    <script src="/js/script.js"></script>
+</body>
+</html>
