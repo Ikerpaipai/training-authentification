@@ -8,6 +8,10 @@ body{
   position: relative;
   width: 100vw;
   height: 100vh;
+  background-image: url(../image/background.jpg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 
 .container-title {
@@ -22,6 +26,7 @@ body{
 .container-title h1 {
   text-align: center;
   font-size: 24px;
+  color: #f1f1f1;
 }
 
 .container-title p {
@@ -29,6 +34,7 @@ body{
   text-align: center;
   font-size: 16;
   width: 70%;
+  color: #f1f1f1;
 }
 
 .container-exercise {
